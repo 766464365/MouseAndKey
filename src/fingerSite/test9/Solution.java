@@ -8,18 +8,18 @@ package fingerSite.test9;
 //斐波契利数列  但是是累加；
 public class Solution {
     public int JumpFloorII(int target) {
-
         int[] temp=new int[target+1];
         if(target>2){
-            temp[0]=0;
+            temp[0]=1;
             temp[1]=1;
             temp[2]=2;
-            for(int i=3;i<=target;i++){
+            temp[3]=4;
+            for(int i=4;i<=target;i++){
                 int val=0;
-                for(int j=target;j>=0;j--){
-                    val+=temp[target-1];
+                for(int j=i;j>0;j--){
+                    val+=temp[j-1];
                 }
-                return val;
+                temp[i]=val;
             }
             return temp[target];
         }
@@ -34,6 +34,6 @@ public class Solution {
     }
     public static void main(String[] args){
         Solution solution=new Solution();
-        System.out.println(solution.JumpFloorII(3));
+        System.out.println(solution.JumpFloorII(5));
     }
 }
