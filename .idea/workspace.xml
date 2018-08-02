@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee046a22-f4b1-4c7e-a305-0f90caf7cccc" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test15/Solution$ListNode.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test15/Solution.class" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test14/Solution$ListNode.class" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test14/Solution$ListNode.class" />
       <change beforePath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test14/Solution.class" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test14/Solution.class" />
@@ -123,7 +125,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1016" />
     <option name="y" value="103" />
     <option name="width" value="1400" />
@@ -361,15 +363,15 @@
       <workItem from="1533102296278" duration="4404000" />
       <workItem from="1533108474246" duration="5306000" />
       <workItem from="1533172004000" duration="3490000" />
-      <workItem from="1533199851481" duration="4682000" />
+      <workItem from="1533199851481" duration="4715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74686000" />
+    <option name="totallyTimeSpent" value="74719000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
