@@ -17,6 +17,79 @@ public class Solution {
             this.val = val;
         }
     }
+//    public ListNode MergeByViolence(ListNode list1,ListNode list2) {
+//
+//        ListNode nullNode=null;
+//        if(list1 == null){
+//            if(list2==null){
+//                return nullNode;
+//            }
+//            else
+//                return list2;
+//        }
+//        else
+//            if(list2==null){
+//                if(list1==null)
+//                    return nullNode;
+//                else
+//                    return list1;
+//            }
+//            else
+//            {
+//                int length1=1,length2=1;
+//                ListNode temp1=list1,temp2=list2;
+//                while(temp1.next!=null){
+//                    length1++;
+//                    temp1=temp1.next;
+//                }
+//                while (temp2.next!=null){
+//                    length2++;
+//                    temp2=temp2.next;
+//                }
+////                System.out.println(length1);
+////                System.out.println(length2);
+//                ListNode tempNode1=new ListNode(0);
+//                ListNode tempNode2=new ListNode(0);
+//                ListNode returnNode=new ListNode(0);
+//                tempNode1.next=list1;
+//                tempNode2.next=list2;
+//                ListNode index=null;
+//                ListNode bianlide=index;
+//                returnNode=bianlide;
+//                returnNode=index;
+//                while(tempNode1.next!=null&&tempNode2.next!=null){
+//                    while(bianlide!=null){
+//                        index=bianlide;
+//                        bianlide=bianlide.next;
+//                    }       //找到了return的最后一个结点
+//                    if(tempNode1.next.val>=tempNode2.next.val){
+//                        index.next=new ListNode(tempNode2.next.val);
+//                        tempNode2=tempNode2.next;
+//                    }
+//                    else
+//                    {
+//                        index.next=new ListNode(tempNode1.next.val);
+//                        tempNode1=tempNode1.next;
+//                    }
+//                }
+//                if(tempNode1.next!=null&&tempNode2.next==null){
+//                    while(tempNode1.next!=null){
+//                        index.next=new ListNode(tempNode1.next.val);
+//                        tempNode1=tempNode1.next;
+//                    }
+//                }
+//                else
+//                {
+//                    while(tempNode2.next!=null){
+//                        index.next=new ListNode(tempNode2.next.val);
+//                        tempNode2=tempNode2.next;
+//                    }
+//                }
+//
+//                return returnNode;
+//            }
+//
+//    }
     public ListNode Merge(ListNode list1,ListNode list2) {
         ListNode nullNode=null;
         if(list1 == null){
@@ -27,41 +100,61 @@ public class Solution {
                 return list2;
         }
         else
-            if(list2==null){
-                if(list1==null)
-                    return nullNode;
-                else
-                    return list1;
-            }
+        if(list2==null){
+            if(list1==null)
+                return nullNode;
             else
-            {
-                int length1=1,length2=1;
-                ListNode temp1=list1,temp2=list2;
-                while(temp1.next!=null){
-                    length1++;
-                    temp1=temp1.next;
-                }
-                while (temp2.next!=null){
-                    length2++;
-                    temp2=temp2.next;
-                }
-                System.out.println(length1);
-                System.out.println(length2);
-                ListNode tempNode1=new ListNode(0);
-                ListNode tempNode2=new ListNode(0);
-                tempNode1.next=list1;
-                tempNode2.next=list2;
-                while(tempNode1.next!=null&&tempNode2.next!=null){
-                    if(tempNode1.next.val>tempNode2.next.val){
-                        ListNode tidaide=tempNode2.next;
-                        tempNode2.next=tempNode2.next.next;
-                        tidaide.next=tempNode1.next;
-                        tempNode1.next=tidaide;
+                return list1;
+        }
+        else
+        {
+            int length1=1,length2=1;
+            ListNode temp1=list1,temp2=list2;
+            while(temp1.next!=null){
+                length1++;
+                temp1=temp1.next;
+            }
+            while (temp2.next!=null){
+                length2++;
+                temp2=temp2.next;
+            }
+//                System.out.println(length1);
+//                System.out.println(length2);
+            int totalLength=length1+length2;
+            int[] array=new int[totalLength];
+            ListNode first=new ListNode(0),second=new ListNode(0);
+            first.next=list1;
+            second.next=list2;
+            for(int i=0;i<totalLength;i++){
+                if(first.next!=null&&second.next!=null){
+                    if(first.next.val>second.next.val){
+                        array[i]=second.next.val;
+                        second=second.next;
+                    }
+                    else
+                    {
+                        array[i]=first.next.val;
+                        first=first.next;
                     }
                 }
-
-                return list1;
+                else if(first.next==null&&second.next!=null){
+                    array[i]=second.next.val;
+                    second=second.next;
+                }
+                else {
+                    array[i]=first.next.val;
+                    first=first.next;
+                }
             }
+            ListNode result=new ListNode(0);
+            ListNode bianlide=result;
+            for (int j=0;j<totalLength;j++){
+                result.next=new ListNode(array[j]);
+                result=result.next;
+            }
+
+            return bianlide.next;
+        }
 
     }
 
@@ -75,6 +168,6 @@ public class Solution {
         a3.next=a4;
 
         Solution solution=new Solution();
-        solution.Merge(a1,a2);
+        System.out.print(solution.Merge(a1,a2).val);
     }
 }
