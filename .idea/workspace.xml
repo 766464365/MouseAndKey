@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee046a22-f4b1-4c7e-a305-0f90caf7cccc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test11/Solution.class" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test11/Solution.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test13/Solution.class" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test13/Solution.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test14/Solution.class" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test14/Solution.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test15/Solution.class" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test15/Solution.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test16/Solution$ListNode.class" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test16/Solution$ListNode.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test16/Solution.class" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test16/Solution.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test4/Solution.class" afterPath="$PROJECT_DIR$/out/production/MouseAndKey/fingerSite/test4/Solution.class" />
-      <change beforePath="$PROJECT_DIR$/src/fingerSite/test11/Solution.java" afterPath="$PROJECT_DIR$/src/fingerSite/test11/Solution.java" />
-      <change beforePath="$PROJECT_DIR$/src/fingerSite/test16/Solution.java" afterPath="$PROJECT_DIR$/src/fingerSite/test16/Solution.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,7 +35,7 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fingerSite/test15/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1323">
+            <state relative-caret-position="1377">
               <caret line="55" column="19" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="55" selection-end-column="19" />
               <folding>
                 <element signature="e#325#326#0" expanded="true" />
@@ -101,15 +85,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fingerSite/test16/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-296">
-              <caret line="90" column="2" lean-forward="true" selection-start-line="90" selection-start-column="2" selection-end-line="90" selection-end-column="2" />
+            <state relative-caret-position="4077">
+              <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
               <folding>
                 <element signature="e#375#376#0" expanded="true" />
                 <element signature="e#413#414#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fingerSite/test17/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -182,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/fingerSite/test15/Solution.java" />
         <option value="$PROJECT_DIR$/src/fingerSite/test11/Solution.java" />
         <option value="$PROJECT_DIR$/src/fingerSite/test16/Solution.java" />
+        <option value="$PROJECT_DIR$/src/fingerSite/test17/Solution.java" />
       </list>
     </option>
   </component>
@@ -191,7 +186,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1016" />
     <option name="y" value="103" />
     <option name="width" value="1400" />
@@ -251,21 +246,14 @@
               <item name="MouseAndKey" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fingerSite" type="462c0819:PsiDirectoryNode" />
-              <item name="test11" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MouseAndKey" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MouseAndKey" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fingerSite" type="462c0819:PsiDirectoryNode" />
-              <item name="test16" type="462c0819:PsiDirectoryNode" />
+              <item name="test17" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,7 +439,7 @@
     <option name="totallyTimeSpent" value="81472000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -492,14 +480,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/fingerSite/test16/Solution.java</url>
-          <line>155</line>
-          <properties />
-          <option name="timeStamp" value="225" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="226" />
     </breakpoint-manager>
     <watches-manager>
@@ -509,13 +489,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/input/String2KeyCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TcpServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -810,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fingerSite/test15/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
+        <state relative-caret-position="1377">
           <caret line="55" column="19" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="55" selection-end-column="19" />
           <folding>
             <element signature="e#325#326#0" expanded="true" />
@@ -837,12 +810,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fingerSite/test16/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-296">
-          <caret line="90" column="2" lean-forward="true" selection-start-line="90" selection-start-column="2" selection-end-line="90" selection-end-column="2" />
+        <state relative-caret-position="4077">
+          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
           <folding>
             <element signature="e#375#376#0" expanded="true" />
             <element signature="e#413#414#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fingerSite/test17/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
