@@ -18,7 +18,7 @@ public class Solution {
         }
 
     }
-    public boolean HasSubtree(TreeNode root1,TreeNode root2) {
-
-    }
+//    public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+//
+//    }
 }
