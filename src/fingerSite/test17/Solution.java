@@ -18,6 +18,7 @@ public class Solution {
         }
 
     }
+
     public boolean HasSubtree(TreeNode root1,TreeNode root2) {
         //第一种否的情况，root1或root2中有一棵是空树
         if(root1==null||root2==null){
@@ -70,4 +71,9 @@ public class Solution {
         node8.right=new TreeNode(2);
         System.out.print(solution.HasSubtree(node1,node8));
     }
+
+//    public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+//
+//    }
+
 }
