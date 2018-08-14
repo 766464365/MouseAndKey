@@ -5,7 +5,7 @@
  */
 package fingerSite.commontest;
 
-import java.util.List;
+
 
 //链表反转
 public class ListReversal {
