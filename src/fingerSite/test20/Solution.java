@@ -8,9 +8,11 @@ import java.util.Stack;
 
 
 public class Solution {
+    Stack<Integer> resultStack =new Stack<>();
     Stack<Integer> mStack =new Stack<>();
     Stack<Integer> temp=new Stack<>();
     public void push(int node) {
+        resultStack.push(node);
         if(mStack.isEmpty()){
             //为空时
             mStack.push(node);
@@ -31,16 +33,33 @@ public class Solution {
             while(!temp.isEmpty()){
                 mStack.push(temp.pop());
             }
-
         }
     }
+    //answer：3,3,2,2,2,3,3,0
 //["PSH3","MIN","PSH4","MIN","PSH2","MIN","PSH3","MIN","POP","MIN","POP","MIN","POP","MIN","PSH0","MIN"]
+
+
     public void pop() {
-        mStack.pop();
+        if(!resultStack.isEmpty()) {
+            int element = resultStack.pop();
+            Stack<Integer> newTemp = new Stack<>();
+            while (!mStack.isEmpty()) {
+                if (mStack.peek() == element) {
+                    //找到了一样的值
+                    mStack.pop();
+                    while (!newTemp.isEmpty()) {
+                        mStack.push(newTemp.pop());
+                    }
+                    break;
+                } else {
+                    newTemp.push(mStack.pop());
+                }
+            }
+        }
     }
 
     public int top() {
-        return mStack.peek();
+        return resultStack.peek();
     }
 
     public int min() {
@@ -64,5 +83,6 @@ public class Solution {
         System.out.println(solution.min());
         solution.push(0);
         System.out.println(solution.min());
+
     }
 }
