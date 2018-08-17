@@ -10,23 +10,24 @@ import java.util.ArrayList;
 
 public class Solution {
     ArrayList<Integer> temp=new ArrayList<>();
-    public boolean IsPopOrder(int [] pushA,int [] popA) {
-        int length=pushA.length;
-        for(int i=0;i<length;i++){
-            temp.add(pushA[i]);
-
-            while (popA[i]==temp.get(temp.size()-1)){
-                temp.remove(temp.size()-1);
-            }
-        }
-
-    }
+//    public boolean IsPopOrder(int [] pushA,int [] popA) {
+//        int length=pushA.length;
+//        for(int i=0;i<length;i++){
+//            temp.add(pushA[i]);
+//
+//            while (popA[i]==temp.get(temp.size()-1)){
+//                temp.remove(temp.size()-1);
+//            }
+//        }
+//
+//
+//    }
     public static void main(String[] args){
         Solution solution=new Solution();
         int[] pushA={1,2,3,4,5};
         int[] popA={5,4,3,2,1};
         int[] aa={2,3,4,1,2};
-        System.out.println(solution.IsPopOrder(pushA,popA));
+//        System.out.println(solution.IsPopOrder(pushA,popA));
     }
 }
 
