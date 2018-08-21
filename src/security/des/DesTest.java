@@ -1,4 +1,4 @@
-package secute;
+package security.des;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -39,9 +39,9 @@ public class DesTest {
         try {
             SecureRandom random = new SecureRandom();
             DESKeySpec desKey = new DESKeySpec(key.getBytes());
-            SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
+            SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("des");
             SecretKey securekey = keyFactory.generateSecret(desKey);
-            Cipher cipher = Cipher.getInstance("DES");
+            Cipher cipher = Cipher.getInstance("des");
             cipher.init(Cipher.ENCRYPT_MODE, securekey, random);
             byte[] result = cipher.doFinal(content.getBytes());
             return result;
@@ -63,9 +63,9 @@ public class DesTest {
         try {
             SecureRandom random = new SecureRandom();
             DESKeySpec desKey = new DESKeySpec(key.getBytes());
-            SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
+            SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("des");
             SecretKey securekey = keyFactory.generateSecret(desKey);
-            Cipher cipher = Cipher.getInstance("DES");
+            Cipher cipher = Cipher.getInstance("des");
             cipher.init(Cipher.DECRYPT_MODE, securekey, random);
             byte[] result = cipher.doFinal(content);
             return new String(result);
