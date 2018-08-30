@@ -50,7 +50,7 @@ public class Sort {
 
     /**
      * Get insert sort int [ ].
-     *插入排序  从小到大
+     *插入排序  从小到大   稳定
      *
      * @param a the a
      * @return the int [ ]
@@ -73,6 +73,53 @@ public class Sort {
         }
         return a;
     }
+
+    //希尔排序   大小未知   不稳定
+    private void shellSort(int[] a) {
+        int dk = a.length/2;
+        while( dk >= 1  ){
+            ShellInsertSort(a, dk);
+            dk = dk/2;
+        }
+    }
+    private void ShellInsertSort(int[] a, int dk) {//类似插入排序，只是插入排序增量是1，这里增量是dk,把1换成dk就可以了
+        for(int i=dk;i<a.length;i++){
+            if(a[i]<a[i-dk]){
+                int j;
+                int x=a[i];//x为待插入元素
+                a[i]=a[i-dk];
+                for(j=i-dk;  j>=0 && x<a[j];j=j-dk){//通过循环，逐个后移一位找到要插入的位置。
+                    a[j+dk]=a[j];
+                }
+                a[j+dk]=x;//插入
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static void main(String[] args) {
         int[] a = {3, 5, 1, 2, 6, 4, 7, 11, 23, 44, 3, 34};
         getInsertSort(a);
