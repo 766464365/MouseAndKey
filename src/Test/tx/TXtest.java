@@ -4,7 +4,7 @@
  *___________________________by xuwei
  */
 
-package Test;
+package Test.tx;
 
 
 import java.util.Scanner;

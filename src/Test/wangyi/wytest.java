@@ -4,7 +4,7 @@
  *___________________________by xuwei
  */
 
-package Test;
+package Test.wangyi;
 
 import java.util.Scanner;
 
@@ -28,5 +28,9 @@ public class wytest {
             }
         }
         System.out.println(ans);
+    }
+    public static void main(String[] args){
+
+
     }
 }

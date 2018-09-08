@@ -4,103 +4,99 @@
  *___________________________by xuwei
  */
 
-package Test;
+package Test.chubao;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
+//chubao第一题，通过率57，原因在于没有考虑边界盆地。
 
-/**
- *
- * @author XW1+6/3
- */
-public class Postfix {
-    //用于记录操作符
-    private static LinkedList<String> operators=new LinkedList<>();
-    //用于记录输出
+public class ChuBaoTest {
+    //操作符
+    private static LinkedList<String> operatorsChar=new LinkedList<>();
+    //输出
     private static LinkedList<String> output=new LinkedList<>();
-    //用于展示后缀表达式
-    private static StringBuilder sb=new StringBuilder();
+    //后缀表达式
+    private static StringBuilder reverse=new StringBuilder();
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         LinkedList<String> list=new LinkedList<>();
+        String test;
         Scanner scanner=new Scanner(System.in);
-        String s;
-        //#号结束输入，输入的字符间要有空格，方便处理
-        while (!(s=scanner.next()).equals("#")) {
-            list.add(s);
+        test=scanner.next();
+        for (char x:test.toCharArray()
+             ) {
+            list.add(String.valueOf(x));
         }
         transferToPostfix(list);
         scanner.close();
-    }
 
-    //中缀表达式转为后缀表达式
+    }
+    //中转后缀表达式
     private static void transferToPostfix(LinkedList<String> list){
         Iterator<String> it=list.iterator();
         while (it.hasNext()) {
             String s = it.next();
             if (isOperator(s)) {
-                if (operators.isEmpty()) {
-                    operators.push(s);
+                if (operatorsChar.isEmpty()) {
+                    operatorsChar.push(s);
                 }
+                //读入不为操作符并且优先级高与栈顶，压入
                 else {
-                    //如果读入的操作符为非")"且优先级比栈顶元素的优先级高或一样，则将操作符压入栈
-                    if (priority(operators.peek())<=priority(s)&&!s.equals(")")) {
-                        operators.push(s);
+                    if (priority(operatorsChar.peek())<=priority(s)&&!s.equals(")")) {
+                        operatorsChar.push(s);
                     }
-                    else if(!s.equals(")")&&priority(operators.peek())>priority(s)){
-                        while (operators.size()!=0&&priority(operators.peek())>=priority(s)
-                                &&!operators.peek().equals("(")) {
-                            if (!operators.peek().equals("(")) {
-                                String operator=operators.pop();
-                                sb.append(operator).append(" ");
+                    else if(!s.equals(")")&&priority(operatorsChar.peek())>priority(s)){
+                        while (operatorsChar.size()!=0&&priority(operatorsChar.peek())>=priority(s)
+                                &&!operatorsChar.peek().equals("(")) {
+                            if (!operatorsChar.peek().equals("(")) {
+                                String operator=operatorsChar.pop();
+                                reverse.append(operator).append(" ");
                                 output.push(operator);
                             }
                         }
-                        operators.push(s);
+                        operatorsChar.push(s);
                     }
-                    //如果读入的操作符是")"，则弹出从栈顶开始第一个"("及其之前的所有操作符
+                    //读取到），弹出栈顶中（之前的操作符
                     else if (s.equals(")")) {
-                        while (!operators.peek().equals("(")) {
-                            String operator=operators.pop();
-                            sb.append(operator).append(" ");
+                        while (!operatorsChar.peek().equals("(")) {
+                            String operator=operatorsChar.pop();
+                            reverse.append(operator).append(" ");
                             output.push(operator);
                         }
                         //弹出"("
-                        operators.pop();
+                        operatorsChar.pop();
                     }
                 }
             }
-            //读入的为非操作符
+            //读入的不为操作符
             else {
-                sb.append(s).append(" ");
+                reverse.append(s).append(" ");
                 output.push(s);
             }
         }
-        if (!operators.isEmpty()) {
-            Iterator<String> iterator=operators.iterator();
+        if (!operatorsChar.isEmpty()) {
+            Iterator<String> iterator=operatorsChar.iterator();
             while (iterator.hasNext()) {
                 String operator=iterator.next();
-                sb.append(operator).append(" ");
+                reverse.append(operator).append(" ");
                 output.push(operator);
                 iterator.remove();
             }
         }
-        System.out.println("后缀： "+sb);
-        calculate();
-        //Collections.reverse(output);
+        getResult();
     }
 
-    //根据后缀表达式计算结果
-    private static void calculate(){
+    //计算结果
+    private static void getResult(){
         LinkedList<String> mList=new LinkedList<>();
-        String[] postStr=sb.toString().split(" ");
+        String[] postStr=reverse.toString().split(" ");
         for (String s:postStr) {
             if (isOperator(s)){
                 if (!mList.isEmpty()){
                     int num1=Integer.valueOf(mList.pop());
                     int num2=Integer.valueOf(mList.pop());
                     if (s.equals("/")&&num1==0){
-                        System.out.println("除数不能为0");
                         return;
                     }
                     int newNum=cal(num2,num1,s);
@@ -108,12 +104,12 @@ public class Postfix {
                 }
             }
             else {
-                //数字则压入栈中
+                //压入数字
                 mList.push(s);
             }
         }
         if (!mList.isEmpty()){
-            System.out.println("result: "+mList.pop());
+            System.out.println(mList.pop());
         }
     }
 
@@ -125,15 +121,13 @@ public class Postfix {
         }
         return false;
     }
-    //计算操作符的优先级
+    //设置操作符的优先级    加减法在先
     private static int priority(String s){
         switch (s) {
-            case "+":return 1;
-            case "-":return 1;
-            case "*":return 2;
-            case "/":return 2;
-            case "(":return 3;
-            case ")":return 3;
+            case "+":return 2;
+            case "-":return 2;
+            case "*":return 1;
+            case "/":return 1;
             default :return 0;
         }
     }
@@ -147,5 +141,4 @@ public class Postfix {
             default :return 0;
         }
     }
-
 }

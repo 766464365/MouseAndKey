@@ -4,7 +4,7 @@
  *___________________________by xuwei
  */
 
-package Test;
+package Test.chubao;
 
 import java.util.Scanner;
 /*

@@ -4,7 +4,7 @@
  *___________________________by xuwei
  */
 
-package Test;
+package Test.chubao;
 
 import java.util.Scanner;
 //思路：遍历的时候，同时判断其上下左右有无数据，并且同时都要大于水的level才行

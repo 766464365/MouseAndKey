@@ -4,7 +4,7 @@
  *___________________________by xuwei
  */
 
-package Test;
+package Test.title;
 
 import java.io.BufferedInputStream;
 import java.util.Scanner;
